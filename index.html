@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nueva Orlean's – Pizzería</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="Estilos.css"/>
+
+  <!-- Asegurar que las páginas ocultas no se vean por defecto -->
+  <style>
+    .pagina {
+        display: none;
+    }
+    .pagina.activa {
+        display: block;
+    }
+  </style>
+</head>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/573227904638" target="_blank" class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<body>
+  <script type="module" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs"></script>
+  <script type="module">
+    var myLandbot = new Landbot.Livechat({
+      configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-3442776-2L0ROHSTXXLOWY45/index.json',
+    });
+  </script>
+
+<!-- ══════════════════════════════ NAV ══════════════════════════════ -->
+<nav>
+  <a href="#" class="nav-logo" onclick="mostrarSeccion('inicio'); return false;">
+    <img src="img/logo.png" alt="Logo Nueva Orleans" class="logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="mostrarSeccion('inicio'); return false;">Inicio</a></li>
+    <li><a href="#" onclick="mostrarSeccion('productos'); return false;">Productos</a></li>
+    <li><a href="#" onclick="mostrarSeccion('reservas'); return false;">Reservas</a></li>
+    <li><a href="#" onclick="mostrarSeccion('pagos'); return false;">Medios de Pago</a></li>
+    <li><a href="#" class="nav-cta" onclick="mostrarSeccion('productos'); return false;">Pedir ahora</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁGINA: INICIO
+══════════════════════════════════════════════════════════════ -->
+<div id="pagina-inicio" class="pagina activa">
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-text">
+      <span class="hero-tag"> Pizzería artesanal</span>
+      <h1 class="hero-title">
+        <span>~ Nueva ~</span>
+        ORLEAN'S
+      </h1>
+      <p class="hero-desc">
+        Pasión, sabor y calidad en cada bocado para disfrutar con quienes mas quieres.
+      </p>
+      <div class="hero-actions">
+        <a href="#" onclick="mostrarSeccion('productos'); return false;" class="btn-primary">Ver menú</a>
+        <a href="#" onclick="mostrarSeccion('reservas'); return false;" class="btn-secondary">Hacer pedido</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="pizza-ring">
+        <img src="img/pizza.png.png" alt="Pizza Nueva Orleans" class="pizza-img">
+        <div class="badge">
+          <strong>10</strong>
+          <span>porciones</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stats-item">
+      <div class="stats-num">20+</div>
+      <div class="stats-label">Años de sabor</div>
+    </div>
+    <div class="stats-item">
+      <div class="stats-num">15+</div>
+      <div class="stats-label">Productos en menú</div>
+    </div>
+    <div class="stats-item">
+      <div class="stats-num">7k+</div>
+      <div class="stats-label">Clientes felices</div>
+    </div>
+    <div class="stats-item">
+      <div class="stats-num">100%</div>
+      <div class="stats-label">Ingredientes frescos</div>
+    </div>
+  </div>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros">
+    <div class="about-visual">
+      <div class="about-box">
+        <img src="img./nosotros.png" alt="Nueva Orleans" class="about-img">
+      </div>
+      <div class="about-accent">
+        <strong>20+</strong>
+        <span>años</span>
+      </div>
+    </div>
+    <div class="about-content">
+      <span class="section-tag">Nuestra historia</span>
+      <h2 class="section-title">El sabor que une <em>generaciones</em></h2>
+      <img src="nosotros" alt="Nueva Orleans" class="about-img">
+      <p class="section-sub">
+        Desde el inicio, en Pizzería Nueva Orlean’s nos hemos caracterizado por brindar calidez, buena atención y momentos especiales alrededor de la buena comida. Con más de 20 años de trayectoria en el centro de Ibagué, nos hemos convertido en un lugar tradicional para compartir en familia, con amigos y disfrutar de sabores únicos en un ambiente acogedor.
+        A lo largo de los años hemos ampliado nuestra variedad de productos, manteniendo siempre la calidad, la dedicación y el sabor que nos representa. Cada preparación está hecha pensando en ofrecer una experiencia especial a quienes nos visitan y han hecho parte de nuestra historia.
+        Más que un restaurante, somos un lugar donde se crean recuerdos, se comparten sonrisas y cada visita se disfruta como en casa.
+      </p>
+      <ul class="about-list">
+        <li><p><strong>Calidad</strong></p></li>
+        <li><p><strong>Tradicion</strong></p></li>
+        <li><p><strong>Variedad gastronomica</strong></p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROMO -->
+  <section id="promo">
+    <span class="section-tag" style="color:rgba(200,22,29,.8)">Ofertas especiales</span>
+    <h2 class="section-title">Nuestras <em>promociones</em></h2>
+    <div class="promo-grid">
+      <div class="promo-card">
+        <span class="promo-emoji">🍕</span>
+        <div class="promo-name">2x1 los martes</div>
+        <p class="promo-desc">Pide dos pizzas medianas y paga solo una. Todos los martes sin restricciones.</p>
+        <div class="promo-discount">2×1</div>
+      </div>
+      <div class="promo-card">
+        <span class="promo-emoji">🎉</span>
+        <div class="promo-name">Combo familiar</div>
+        <p class="promo-desc">Pizza grande + 2 medianas + 4 bebidas. El combo ideal para toda la familia.</p>
+        <div class="promo-discount">20% OFF</div>
+      </div>
+      <div class="promo-card">
+        <span class="promo-emoji">🛵</span>
+        <div class="promo-name">Domicilio gratis</div>
+        <p class="promo-desc">En pedidos superiores a $60.000 el domicilio no tiene costo adicional.</p>
+        <div class="promo-discount">$0</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <span class="section-tag" style="color:rgba(255,255,255,.6)">Encuéntranos</span>
+    <h2 class="section-title">¿Listo para <em style="color:rgba(255,255,255,.4)">pedir?</em></h2>
+    <p class="section-sub">Visítanos, llámanos o haz tu pedido en línea. Estamos para servirte.</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="ico">📍</div>
+        <h4>Dirección</h4>
+        <p>Calle 14 Bis #2a51<br>Ibagué-Tolima</p>
+      </div>
+      <div class="contact-item">
+        <div class="ico">📞</div>
+        <h4>Teléfono</h4>
+        <p>3227904638</p>
+      </div>
+      <div class="contact-item">
+        <div class="ico">🕐</div>
+        <h4>Horario</h4>
+        <p>Lun – Sáb: 12am – 9pm<br>Dom – Fest: 12am – 8pm</p>
+      </div>
+      <div class="contact-item">
+        <div class="ico">📲</div>
+        <h4>Redes sociales</h4>
+        <p>@NuevaOrleans<br>Instagram · Facebook</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-logo">~ NUEVA ORLEAN'S ~</span>
+      <span class="footer-copy">© 2026 Nueva Orlean's Pizzería. Todos los derechos reservados.</span>
+    </div>
+  </section>
+
+</div><!-- fin pagina-inicio -->
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁGINA: PRODUCTOS
+══════════════════════════════════════════════════════════════ -->
+<div id="pagina-productos" class="pagina">
+
+  <section id="menu">
+
+    <div class="menu-header">
+      <div class="menu-header-left">
+        <span class="section-tag">LO QUE HACEMOS</span>
+        <h2 class="section-title">NUESTRO <em>MENÚ</em></h2>
+        <div class="menu-tabs">
+          <button class="tab active" data-categoria="pizzas">Pizzas</button>
+          <button class="tab" data-categoria="lasana">Lasaña</button>
+          <button class="tab" data-categoria="hamburguesa">Hamburguesa</button>
+          <button class="tab" data-categoria="cubano">Sandwich Cubano</button>
+          <button class="tab" data-categoria="perro">Perro Caliente</button>
+          <button class="tab" data-categoria="salchipapa">Salchipapa</button>
+          <button class="tab" data-categoria="bebidas">Bebidas</button>
+        </div>
+      </div>
+      <a href="#" class="btn-primary">Pedir ahora →</a>
+    </div>
+
+    <!-- ══════════ PIZZAS ══════════ -->
+    <div class="menu-grid" id="cat-pizzas">
+
+      <div class="product-card">
+        <div class="card-img">
+          <img src="img/hawaiana.png" alt="Pizza Hawaiana"/>
+          <span class="card-badge popular">⭐ Popular</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Hawiana</h3>
+          <p class="card-desc">Queso, jamón, piña.</p>
+          <div class="card-footer">
+            <span class="card-price">$9.500 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+            <img src="img/mixta.png" alt="Pizza Mixtas"/>
+          <span class="card-badge clasica">Clásica</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Mixta</h3>
+          <p class="card-desc">Queso, salami, jamón, pollo, champiñones, pimentón y cebolla.</p>
+          <div class="card-footer">
+            <span class="card-price">$9.500 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+              <img src="img/carnes.png" alt="Pizza Carnes"/>
+          <span class="card-badge clasica">Clásica</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Carnes</h3>
+          <p class="card-desc">Queso, salami, jamón, pollo, cabano, pimentón y cebolla.</p>
+          <div class="card-footer">
+            <span class="card-price">$9.500 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+              <img src="img/pollo-champinones.png" alt="Pizza pollo-champinones"/>
+          <span class="card-badge clasica">Clásica</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Pollo-champiñones</h3>
+          <p class="card-desc">Queso, pollo, champiñones y especias.</p>
+          <div class="card-footer">
+            <span class="card-price">$9.500 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+              <img src="img/mexicana.png" alt="Pizza Mexicana"/>
+          <span class="card-badge popular">⭐ Popular</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Mexicana</h3>
+          <p class="card-desc">Queso, carne boloñesa, cebolla, tomate, maíz tierno, picante, cilantro y tostacos.</p>
+          <div class="card-footer">
+            <span class="card-price">$9.500 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+            <img src="img/nueva-orleans.png" alt="Pizza Nueva Orlean´s"/>
+          <span class="card-badge especial">Especial</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Nueva Orlean's</h3>
+          <p class="card-desc">Queso, tocineta, cebolla cábano, cordero, maíz, tierno y pimentón.</p>
+          <div class="card-footer">
+            <span class="card-price">$10.000 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+          <img src="img/pepperoni.png" alt="Pizza Pepperoni"/>
+          <span class="card-badge especial">Especial</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Peperoni</h3>
+          <p class="card-desc">Queso, pepperoni y especies.</p>
+          <div class="card-footer">
+            <span class="card-price">$10.000 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+        <img src="img/vegetariana.png" alt="Pizza Vegetariana"/>
+          <span class="card-badge especial">Especial</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Vegetariana</h3>
+          <p class="card-desc">Queso, cebolla, tomate, maíz tierno, champiñones, pimentón y especias.</p>
+          <div class="card-footer">
+            <span class="card-price">$10.000 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+            <img src="img/capricho.png" alt="Pizza Capricho"/>
+          <span class="card-badge especial">Especial</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Capricho</h3>
+          <p class="card-desc">Queso y bocadillo</p>
+          <div class="card-footer">
+            <span class="card-price">$10.000 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- FIN PIZZAS -->
+
+    <!-- ══════════ LASAÑA ══════════ -->
+    <div class="menu-grid hidden" id="cat-lasana">
+
+
+      <div class="product-card">
+        <div class="card-img">
+        <img src="img/lasaña mixta.png" alt="Lasaña Mixta"/>
+          <span class="card-badge">250g</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Mixta</h3>
+          <p class="card-desc">Pasta para lasaña, carne boloñesa, jamón, champiñones, pollo, queso y orégano.</p>
+          <div class="card-footer">
+            <span class="card-price">$12.500 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="product-card">
+        <div class="card-img">
+          <img src="img/lasaña pollo-champinones.png" alt="Lasaña Pollo-champinones"/>
+          <span class="card-badge">250g</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Pollo Champiñones</h3>
+          <p class="card-desc">Pasta para lasaña, champiñones, pollo, queso y orégano.</p>
+          <div class="card-footer">
+            <span class="card-price">$24.000 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- FIN LASAÑA -->
+
+    <!-- ══════════ HAMBURGUESA ══════════ -->
+    <div class="menu-grid hidden" id="cat-hamburguesa">
+
+      <div class="product-card">
+        <div class="card-img">
+        <img src="img/mixta+papas.png" alt="Hamburguesa Mixta+papas"/>
+          <span class="card-badge clasica">Clásica</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Mixta + Papas</h3>
+          <p class="card-desc">Carne artesanal, pollo jamón, lechuga, tomate y queso.</p>
+          <div class="card-footer">
+            <span class="card-price">$12.000 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+          <img src="img/hawaiana+papas.png" alt="Hamburguesa Hawaiana+papas"/>
+          <span class="card-badge popular">⭐ Popular</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Hawaiana + Papas</h3>
+          <p class="card-desc">Carne artesanal, trozos de piña, jamón, lechuga, tomate y queso.</p>
+          <div class="card-footer">
+            <span class="card-price">$14.000 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- FIN HAMBURGUESA -->
+
+    <!-- ══════════ SANDWICH CUBANO ══════════ -->
+    <div class="menu-grid hidden" id="cat-cubano">
+
+      <div class="product-card">
+        <div class="card-img">
+        <img src="img/sandwich especial.png" alt="Sandwich Especial"/>
+          <span class="card-badge clasica">Clásico</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Sandwich especial</h3>
+          <p class="card-desc">Jamón, jamonada, cordero, salami, tomate, lechuga y queso.</p>
+          <div class="card-footer">
+            <span class="card-price">$11.000 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+        <img src="img/sandwich super especial.png" alt="Sandwich Super Especial"/>
+          <span class="card-badge especial">Especial</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Sándwich súper especial</h3>
+          <p class="card-desc">Jamón, jamonada, cordero, salami, pollo tomate, lechuga y queso. </p>
+          <div class="card-footer">
+            <span class="card-price">$12.000 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+          <img src="img/sandwich cordero y pollo.png" alt="Sandwich Cordero y Pollo"/>
+          <span class="card-badge especial">Especial</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Sándwich de cordero y pollo</h3>
+          <p class="card-desc">Cerdo, pollo, tomate, lechuga y queso </p>
+          <div class="card-footer">
+            <span class="card-price">$12.500 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <!-- FIN SANDWICH CUBANO -->
+
+    <!-- ══════════ PERRO CALIENTE ══════════ -->
+    <div class="menu-grid hidden" id="cat-perro">
+
+
+
+      <div class="product-card">
+        <div class="card-img">
+          <img src="img/perro caliente clasico .png" alt="Perro caliente Clasico"/>
+          <span class="card-badge especial">Especial</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Clasico</h3>
+          <p class="card-desc">Salchicha americana, queso y papa ripio.</p>
+          <div class="card-footer">
+            <span class="card-price">$8.500 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+          <img src="img/perro caliente especial .png" alt="Perro caliente Especial"/>
+          <span class="card-badge especial">Especial</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Especial</h3>
+          <p class="card-desc">Salchicha, pan, queso fundido, tocineta, salsas surtidas, papas chips.</p>
+          <div class="card-footer">
+            <span class="card-price">$9.000 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- FIN PERRO CALIENTE -->
+
+    <!-- ══════════ SALCHIPAPA ══════════ -->
+    <div class="menu-grid hidden" id="cat-salchipapa">
+
+      <div class="product-card">
+        <div class="card-img">
+    <img src="img/salchipapa sencillo.png" alt="Salchipapa Sencillo"/>
+          <span class="card-badge clasica">Clásica</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Sencillo</h3>
+          <p class="card-desc">300 g de papas, salchicha americana y queso. </p>
+          <div class="card-footer">
+            <span class="card-price">$8.000 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+          <img src="img/salchipapa especial.png" alt="Salchipapa Especial"/>
+          <span class="card-badge especial">Especial</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Especial</h3>
+          <p class="card-desc">300 gramos de papas, salchicha americana, papa ripio, queso, pollo desmechado, tocineta y maíz tierno.</p>
+          <div class="card-footer">
+            <span class="card-price">$10.000 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- FIN SALCHIPAPA -->
+
+    <!-- ══════════ BEBIDAS ══════════ -->
+    <div class="menu-grid hidden" id="cat-bebidas">
+
+      <div class="product-card">
+        <div class="card-img">
+            <img src="img/gaseosa 300ml.png" alt="Gaseosa 300ml"/>
+          <span class="card-badge">350ml</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Gaseosa Postobón 300ml</h3>
+          <p class="card-desc">Pepsi, manzana, uva, frescola, colombiana, naranja, 7up y Bretaña.</p>
+          <div class="card-footer">
+            <span class="card-price">$3.600 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+          <img src="img/gaseosa 1l.png" alt="Gaseosa 1L"/>
+          <span class="card-badge">1L</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Gaseosa Postobón 1L</h3>
+          <p class="card-desc">Pepsi, manzana, uva, ginger y colombiana.</p>
+          <div class="card-footer">
+            <span class="card-price">$4.000 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+        <img src="img/jugo hit .png" alt="Jugo HIT"/>
+          <span class="card-badge clasica">Natural</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Jugo Hit</h3>
+          <p class="card-desc">Mango, mora, tropical o lulo. (Jugo hit personal)</p>
+          <div class="card-footer">
+            <span class="card-price">$3.600 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+            <img src="img/agua.png" alt="Agua"/>
+          <span class="card-badge">500ml</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Agua Y otras...</h3>
+          <p class="card-desc">Agua con gas, mister tea, limón y durazno.</p>
+          <div class="card-footer">
+            <span class="card-price">$3.000 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img">
+          <img src="img/cerveza .png" alt="Cerveza"/>
+          <span class="card-badge">500ml</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Cerveza</h3>
+          <p class="card-desc">Pony Malta, Poker, Águila, Club Colombia dorada</p>
+          <div class="card-footer">
+            <span class="card-price">$5.500 <small>COP</small></span>
+            <button class="btn-add">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- FIN BEBIDAS -->
+
+  </section>
+
+</div><!-- fin pagina-productos -->
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁGINA: RESERVAS
+══════════════════════════════════════════════════════════════ -->
+<div id="pagina-reservas" class="pagina">
+  <section id="reservacion">
+    <div class="container reservacion-inner">
+      <span class="section-label">Reserva tu lugar</span>
+      <h2 class="section-title">
+        HAZ TU <span>RESERVACIÓN</span>
+      </h2>
+      <p>Garantiza tu mesa y vive una experiencia única. Respondemos en menos de 30 minutos.</p>
+
+      <form id="reservaForm" action="https://api.web3forms.com/submit" method="POST">
+
+        <!-- ══ WEB3FORMS CONFIG ══ -->
+        <input type="hidden" name="access_key" value="94da9daf-c37d-4778-b798-f410b2457137">
+        <input type="hidden" name="subject" value="🍕 Nueva Reservación - Pizzería Nueva Orleans">
+        <input type="hidden" name="redirect" value="false">
+        <input type="hidden" name="from_name" value="Pizzería Nueva Orleans - Web">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="300 000 0000" required
+              pattern="[0-9\s\+\-]{7,15}" title="Ingresa un número de teléfono válido">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha" required>
+          </div>
+          <div class="form-group">
+            <label for="hora">Hora</label>
+            <input type="time" id="hora" name="hora" min="12:00" max="22:00" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="personas">Número de personas</label>
+            <select id="personas" name="personas" required>
+              <option value="" disabled selected>Selecciona</option>
+              <option value="1 persona">1 persona</option>
+              <option value="2 personas">2 personas</option>
+              <option value="3 – 4 personas">3 – 4 personas</option>
+              <option value="5 – 6 personas">5 – 6 personas</option>
+              <option value="7 o más">7 o más</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ocasion">Ocasión</label>
+            <select id="ocasion" name="ocasion" required>
+              <option value="" disabled selected>Selecciona</option>
+              <option value="Cena informal">Cena informal</option>
+              <option value="Cumpleaños">Cumpleaños</option>
+              <option value="Aniversario">Aniversario</option>
+              <option value="Reunión de negocios">Reunión de negocios</option>
+              <option value="Otra">Otra</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group form-full">
+            <label for="solicitudes">Solicitudes especiales</label>
+            <textarea id="solicitudes" name="solicitudes"
+              placeholder="Alergias, decoración especial, silla para bebé…"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary form-submit" id="btnEnviar">
+          Confirmar reservación
+        </button>
+      </form>
+    </div>
+  </section>
+
+</div><!-- fin pagina-reservas -->
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     PÁGINA: MEDIOS DE PAGO
+══════════════════════════════════════════════════════════════ -->
+<div id="pagina-pagos" class="pagina">
+  <section style="min-height: 80vh; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 24px; text-align: center; padding: 100px 6vw;">
+    <span class="section-tag">Facilidades de pago</span>
+    <h2 class="section-title">Medios de <em>pago</em></h2>
+    <p class="section-sub" style="margin: 0 auto;">Acepta múltiples formas de pago para tu comodidad.</p>
+    <div style="display:flex; gap:24px; flex-wrap:wrap; justify-content:center; margin-top:30px;">
+      <div class="payment-container">
+
+        <div class="payment-card">
+            <div class="ico">💵</div>
+            <h3>Efectivo</h3>
+            <p>Paga directamente.</p>
+            <a href="#">Pagar</a>
+        </div>
+
+        <div class="payment-card">
+            <div class="ico">📱</div>
+            <h3>Nequi</h3>
+            <p>Transferencia inmediata.</p>
+            <a href="#">Pagar</a>
+        </div>
+
+        <div class="payment-card">
+            <div class="ico">📱</div>
+            <h3>Bancolombia</h3>
+            <p>Transferencia bancaria.</p>
+            <a href="#">Pagar</a>
+        </div>
+
+        <div class="payment-card">
+            <div class="ico">📱</div>
+            <h3>Davivienda</h3>
+            <p>Transferencia bancaria.</p>
+            <a href="#">Pagar</a>
+        </div>
+
+      </div> <!-- payment-container -->
+    </div>
+  </section>
+</div><!-- fin pagina-pagos -->
+
+<!-- ══════════════════════════════════════════════════════════════
+     JAVASCRIPT PARA NAVEGACIÓN Y FUNCIONALIDAD
+══════════════════════════════════════════════════════════════ -->
+<script>
+  // Función para cambiar entre secciones
+  function mostrarSeccion(seccionId) {
+      // Ocultar todas las secciones
+      const paginas = document.querySelectorAll('.pagina');
+      paginas.forEach(pagina => {
+          pagina.classList.remove('activa');
+      });
+
+      // Mostrar la sección seleccionada
+      const seccionMostrar = document.getElementById('pagina-' + seccionId);
+      if (seccionMostrar) {
+          seccionMostrar.classList.add('activa');
+      }
+
+      // Hacer scroll al inicio de la página
+      window.scrollTo(0, 0);
+  }
+
+  // Al cargar la página, asegurar que la sección de inicio esté visible
+  document.addEventListener('DOMContentLoaded', function() {
+      mostrarSeccion('inicio');
+  });
+
+  // Script para las pestañas del menú de productos
+  document.addEventListener('DOMContentLoaded', function() {
+      const tabs = document.querySelectorAll('.tab');
+      const grids = document.querySelectorAll('.menu-grid');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          const cat = tab.dataset.categoria;
+          grids.forEach(grid => {
+            grid.classList.add('hidden');
+            if (grid.id === 'cat-' + cat) grid.classList.remove('hidden');
+          });
+        });
+      });
+
+      document.querySelectorAll('.btn-add').forEach(btn => {
+        btn.addEventListener('click', function () {
+          const original = this.textContent;
+          this.textContent = '✓ Agregado';
+          this.style.background = '#2e7d32';
+          setTimeout(() => {
+            this.textContent = original;
+            this.style.background = '';
+          }, 1500);
+        });
+      });
+  });
+</script>
+
+</body>
+</html>

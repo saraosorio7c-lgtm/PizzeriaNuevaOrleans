@@ -1186,3 +1186,23 @@ color:#CB0D12;
 .pagina.activa {
     display: block;
 }
+@media (max-width: 768px) {
+    
+    /* AQUÍ VAN LOS CAMBIOS EXCLUSIVOS PARA CELULAR */
+
+    .hero-visual {
+        width: 100%;
+        padding: 0;
+    }
+
+    .pizza-ring {
+        width: 350px;
+        height: 350px;
+    }
+
+    .pizza-img {
+        width: 290px;
+        height: 290px;
+    }
+   
+}

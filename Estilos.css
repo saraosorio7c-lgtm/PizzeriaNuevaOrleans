@@ -1248,26 +1248,32 @@ color:#CB0D12;
    MENÚ RESPONSIVE
    ========================= */
 
+/* =========================
+   LOGO
+   ========================= */
+
 .logo-img {
   max-height: 58px;
   width: auto;
   display: block;
 }
 
-/* Botón hamburguesa */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--blanco);
-  font-size: 30px;
-  cursor: pointer;
-  padding: 5px;
-}
 
 /* =========================
-   CELULAR
+   BOTÓN HAMBURGUESA
+   Oculto en desktop
    ========================= */
+
+.menu-toggle {
+  display: none;
+}
+
+
+/* =========================
+   SOLO CELULAR
+   ========================= */
+
+@media (max-width: 768px) {
 
   nav {
     height: 70px;
@@ -1280,11 +1286,20 @@ color:#CB0D12;
     width: auto;
   }
 
+  /* Hamburguesa visible SOLO en celular */
   .menu-toggle {
     display: block;
+    background: none;
+    border: none;
+    color: var(--blanco);
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 5px;
     z-index: 102;
   }
 
+  /* Menú cerrado */
   .nav-links {
     position: absolute;
     top: 70px;
@@ -1302,7 +1317,8 @@ color:#CB0D12;
     box-shadow: 0 8px 20px rgba(0, 0, 0, .3);
   }
 
-  .nav-links.active {
+  /* Menú abierto */
+  .nav-links.menu-open {
     display: flex;
   }
 
@@ -1324,5 +1340,5 @@ color:#CB0D12;
     display: inline-block !important;
     margin-top: 8px;
   }
-   
+}
 }

@@ -20,21 +20,3 @@ function mostrarSeccion(seccionId) {
 document.addEventListener('DOMContentLoaded', function() {
     mostrarSeccion('inicio');
 });
-function toggleMenu() {
-  const navLinks = document.getElementById('navLinks');
-  navLinks.classList.toggle('active');
-}
-function toggleMenu() {
-  const navLinks = document.getElementById('navLinks');
-  navLinks.classList.toggle('menu-open');
-}
-
-function cerrarMenu() {
-  const navLinks = document.getElementById('navLinks');
-  navLinks.classList.remove('menu-open');
-}
-
-function cerrarMenu() {
-  const navLinks = document.getElementById('navLinks');
-  navLinks.classList.remove('active');
-}

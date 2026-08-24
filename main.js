@@ -20,3 +20,12 @@ function mostrarSeccion(seccionId) {
 document.addEventListener('DOMContentLoaded', function() {
     mostrarSeccion('inicio');
 });
+function toggleMenu() {
+  const navLinks = document.getElementById('navLinks');
+  navLinks.classList.toggle('active');
+}
+
+function cerrarMenu() {
+  const navLinks = document.getElementById('navLinks');
+  navLinks.classList.remove('active');
+}
